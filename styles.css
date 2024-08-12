@@ -60,7 +60,6 @@ section{
 }
 .child {
     position: relative;
-    /* border: 2px solid var(--Grayish-Blue); */
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1); 
@@ -92,4 +91,26 @@ section{
     border-top: 5px solid var(--Orange);
     grid-column: 2/3;
     grid-row: 3/5;
+}
+@media screen and (max-width: 768px){
+    section{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 300px);
+    }
+    .super,.calc,.team,.karma{
+        grid-column: 1/2;
+    }
+    .team{
+        grid-row: 1/2;
+    }
+    .super{
+        grid-row: 2/3;
+    }
+    .calc{
+        grid-row: 3/4;
+    }
+    .karma{
+        grid-row: 4/5;
+    }
+    
 }
